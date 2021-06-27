@@ -1,5 +1,5 @@
 <h1 align="center">
-	<img src="https://user-images.githubusercontent.com/55202424/123529711-6834e680-d6c9-11eb-8fcf-511fec6854fb.png" alt="GamePlay" width="200"/>
+	<img src="./src/assets/images/logo.svg" alt="Letmeask" width="200"/>
 </h1>
 <p align="center">
   <a href="#-sobre">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
