@@ -5,8 +5,8 @@
   <a href="#-sobre">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 	<a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#information_source-como-usar">Como Usar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#memo-licença">Licença</a>
+  <a href="#-como-usar">Como Usar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-licença">Licença</a>
 </p>
 
 <div align="center">
@@ -22,7 +22,7 @@ Projeto desenvolvido durante a NLW Together, na trilha ReactJs da RocketSeat.
 ## :rocket: Tecnologias
 - [Firebase](https://firebase.google.com)
 
-- [Node SASS](https://github.com/sass/node-sass)
+- [Styled Components](https://styled-components.com/)
 
 - [React Router DOM](https://reactrouter.com/web/guides/quick-start)
 

@@ -4,9 +4,8 @@ import illustrationImg from '../../assets/images/illustration.svg';
 import logoImg from '../../assets/images/logo.svg';
 import { Button } from '../../components/Button';
 import { useAuth } from '../../hooks/useAuth';
-
-import './styles.scss';
 import { database } from '../../services/firebase';
+import { Container, Aside, Main, MainContent } from './styles';
 
 export const NewRoom: React.FC = () => {
   const { user } = useAuth();
@@ -33,17 +32,17 @@ export const NewRoom: React.FC = () => {
   }
 
   return (
-    <div id="page-auth">
-      <aside>
+    <Container>
+      <Aside>
         <img
           src={illustrationImg}
           alt="Ilustração simbolizando perguntas e respostas"
         />
         <strong>Crie salas de Q&amp;A ao-vivo</strong>
         <p>Tira dúvidas da sua audiência em tempo-real</p>
-      </aside>
-      <main>
-        <div className="main-content">
+      </Aside>
+      <Main>
+        <MainContent>
           <img src={logoImg} alt="letmeask" />
 
           <h2>Criar uma nova sala</h2>
@@ -60,8 +59,8 @@ export const NewRoom: React.FC = () => {
           <p>
             Quer entrar em uma sala existente? <Link to="/">Clique aqui</Link>
           </p>
-        </div>
-      </main>
-    </div>
+        </MainContent>
+      </Main>
+    </Container>
   );
 };

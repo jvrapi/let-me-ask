@@ -9,7 +9,14 @@ import illustrationImg from '../../assets/images/illustration.svg';
 import logoImg from '../../assets/images/logo.svg';
 import googleIconImg from '../../assets/images/google-icon.svg';
 
-import './styles.scss';
+import {
+  Container,
+  Aside,
+  Main,
+  MainContent,
+  CreateRoom,
+  Separator
+} from './styles';
 
 export const Home: React.FC = () => {
   const history = useHistory();
@@ -47,25 +54,25 @@ export const Home: React.FC = () => {
   }
 
   return (
-    <div id="page-auth">
-      <aside>
+    <Container>
+      <Aside>
         <img
           src={illustrationImg}
           alt="Ilustração simbolizando perguntas e respostas"
         />
         <strong>Crie salas de Q&amp;A ao-vivo</strong>
         <p>Tira dúvidas da sua audiência em tempo-real</p>
-      </aside>
-      <main>
-        <div className="main-content">
+      </Aside>
+      <Main>
+        <MainContent>
           <img src={logoImg} alt="letmeask" />
 
-          <button className="create-room" onClick={handleCreateRoom}>
+          <CreateRoom onClick={handleCreateRoom}>
             <img src={googleIconImg} alt="Logo da google" />
             Crie sua sala com o Google
-          </button>
+          </CreateRoom>
 
-          <div className="separator">ou entre em uma sala</div>
+          <Separator>ou entre em uma sala</Separator>
 
           <form onSubmit={handleJoinRoom}>
             <input
@@ -76,8 +83,8 @@ export const Home: React.FC = () => {
             />
             <Button type="submit">Entrar na sala</Button>
           </form>
-        </div>
-      </main>
-    </div>
+        </MainContent>
+      </Main>
+    </Container>
   );
 };

@@ -6,11 +6,18 @@ import { Question } from '../../components/Question';
 import { RoomCode } from '../../components/RoomCode';
 // import { useAuth } from '../../hooks/useAuth';
 import { useRoom } from '../../hooks/useRoom';
-import './styles.scss';
 import deleteImg from '../../assets/images/delete.svg';
 import checkImg from '../../assets/images/check.svg';
 import answerImg from '../../assets/images/answer.svg';
 import { database } from '../../services/firebase';
+import {
+  Container,
+  Header,
+  Content,
+  Main,
+  RoomTitle,
+  QuestionList
+} from './styles';
 
 type RoomParams = {
   id: string;
@@ -51,27 +58,27 @@ export const AdminRoom: React.FC = () => {
   }
 
   return (
-    <div id="page-room">
-      <header>
-        <div className="content">
+    <Container>
+      <Header>
+        <Content>
           <img src={logoImg} alt="Letmeask" />
-          <div className="">
+          <div>
             <RoomCode code={roomId} />
             <Button isOutlined onClick={handleEndRoom}>
               Encerrar a sala
             </Button>
           </div>
-        </div>
-      </header>
+        </Content>
+      </Header>
 
-      <main>
-        <div className="room-title">
+      <Main>
+        <RoomTitle>
           <h1>Sala {title}</h1>
 
           {questions.length > 0 && <span> {questions.length} pergunta(s)</span>}
-        </div>
+        </RoomTitle>
 
-        <div className="question-list">
+        <QuestionList>
           {questions.map(question => (
             <Question
               key={question.id}
@@ -106,8 +113,8 @@ export const AdminRoom: React.FC = () => {
               </button>
             </Question>
           ))}
-        </div>
-      </main>
-    </div>
+        </QuestionList>
+      </Main>
+    </Container>
   );
 };
