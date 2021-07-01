@@ -24,8 +24,13 @@ Projeto desenvolvido durante a NLW Together, na trilha ReactJs da RocketSeat.
 
 - [Node SASS](https://github.com/sass/node-sass)
 
-
 - [React Router DOM](https://reactrouter.com/web/guides/quick-start)
+
+- [ESLint](https://eslint.org/)
+
+- [Prettier](https://prettier.io/)
+
+
 
 ## 🔖 Layout
 
