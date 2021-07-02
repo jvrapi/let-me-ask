@@ -1,25 +1,32 @@
-import { Button } from '../../components/Button';
-import { useHistory } from 'react-router-dom';
-
-import { useAuth } from '../../hooks/useAuth';
 import React, { FormEvent, useState } from 'react';
-import { database } from '../../services/firebase';
-
+import { useHistory } from 'react-router-dom';
+import googleIconImg from '../../assets/images/google-icon.svg';
 import illustrationImg from '../../assets/images/illustration.svg';
 import logoImg from '../../assets/images/logo.svg';
-import googleIconImg from '../../assets/images/google-icon.svg';
-
+import { Button } from '../../components/Button';
+import { useAuth } from '../../hooks/useAuth';
+import { database } from '../../services/firebase';
 import {
-  Container,
   Aside,
+  Container,
+  CreateRoom,
   Main,
   MainContent,
-  CreateRoom,
   Separator
 } from './styles';
+import styled from 'styled-components';
+import ReactSwitch from 'react-switch';
+import { useTheme } from '../../hooks/useTheme';
+const Switcher = styled(ReactSwitch)`
+  position: absolute !important;
+  right: 50px;
+  top: 33px;
+`;
 
 export const Home: React.FC = () => {
   const history = useHistory();
+  const { theme, changeTheme } = useTheme();
+
   const { user, signInWithGoogle } = useAuth();
   const [roomCode, setRoomCode] = useState('');
 
@@ -54,37 +61,45 @@ export const Home: React.FC = () => {
   }
 
   return (
-    <Container>
-      <Aside>
-        <img
-          src={illustrationImg}
-          alt="Ilustração simbolizando perguntas e respostas"
-        />
-        <strong>Crie salas de Q&amp;A ao-vivo</strong>
-        <p>Tira dúvidas da sua audiência em tempo-real</p>
-      </Aside>
-      <Main>
-        <MainContent>
-          <img src={logoImg} alt="letmeask" />
+    <>
+      <Switcher
+        onChange={changeTheme}
+        checked={theme.name === 'dark'}
+        checkedIcon={false}
+        uncheckedIcon={false}
+      />
+      <Container>
+        <Aside>
+          <img
+            src={illustrationImg}
+            alt="Ilustração simbolizando perguntas e respostas"
+          />
+          <strong>Crie salas de Q&amp;A ao-vivo</strong>
+          <p>Tira dúvidas da sua audiência em tempo-real</p>
+        </Aside>
+        <Main>
+          <MainContent>
+            <img src={logoImg} alt="letmeask" />
 
-          <CreateRoom onClick={handleCreateRoom}>
-            <img src={googleIconImg} alt="Logo da google" />
-            Crie sua sala com o Google
-          </CreateRoom>
+            <CreateRoom onClick={handleCreateRoom}>
+              <img src={googleIconImg} alt="Logo da google" />
+              Crie sua sala com o Google
+            </CreateRoom>
 
-          <Separator>ou entre em uma sala</Separator>
+            <Separator>ou entre em uma sala</Separator>
 
-          <form onSubmit={handleJoinRoom}>
-            <input
-              type="text"
-              placeholder="Digite o código da sala"
-              onChange={event => setRoomCode(event.target.value)}
-              value={roomCode}
-            />
-            <Button type="submit">Entrar na sala</Button>
-          </form>
-        </MainContent>
-      </Main>
-    </Container>
+            <form onSubmit={handleJoinRoom}>
+              <input
+                type="text"
+                placeholder="Digite o código da sala"
+                onChange={event => setRoomCode(event.target.value)}
+                value={roomCode}
+              />
+              <Button type="submit">Entrar na sala</Button>
+            </form>
+          </MainContent>
+        </Main>
+      </Container>
+    </>
   );
 };

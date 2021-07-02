@@ -5,9 +5,10 @@ export default {
     primary: '#835afd',
     secondary: '#e559f9',
 
-    background: '#29292e',
-    text: '#f8f8f8',
+    background: '#f8f8f8',
+    text: '#29292e',
     disabled: '#CACECB',
-    ballSwitch: '#17bebb'
+    ballSwitch: '#17bebb',
+    headerBorder: '#e2e2e2'
   }
 };

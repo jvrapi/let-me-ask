@@ -7,8 +7,8 @@ export const GlobalStyles = createGlobalStyle`
 		box-sizing: border-box;
 	}
 	body{
-		background: #F8F8F8;
-		color: #29292E;
+		background: ${props => props.theme.colors.background};
+  color: ${props => props.theme.colors.text};
 	}
 	body, input, textarea, button {
 		font: 400 16px 'Roboto', sans-serif;

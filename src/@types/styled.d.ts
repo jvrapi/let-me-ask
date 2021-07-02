@@ -12,6 +12,7 @@ declare module 'styled-components' {
       text: string;
       disabled: string;
       ballSwitch: string;
+      headerBorder: string;
     };
   }
 }

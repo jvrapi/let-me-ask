@@ -4,7 +4,7 @@ export const Container = styled.div``;
 
 export const Header = styled.header`
   padding: 24px;
-  border-bottom: 1px solid #e2e2e2;
+  border-bottom: 1px solid ${props => props.theme.colors.headerBorder};
 `;
 
 export const Content = styled.div`
@@ -32,7 +32,7 @@ export const RoomTitle = styled.div`
   h1 {
     font-family: 'Poppins', sans-serif;
     font-size: 24px;
-    color: #29292e;
+    color: ${props => props.theme.colors.text};
   }
 
   span {
@@ -73,7 +73,7 @@ export const FormFooter = styled.footer`
     button {
       background: transparent;
       border: 0;
-      color: #835afd;
+      color: ${props => props.theme.colors.primary};
       text-decoration: underline;
       font-size: 14px;
       font-weight: 500;
@@ -94,7 +94,7 @@ export const UserInfo = styled.div`
 
   > span {
     margin-left: 8px;
-    color: #29292e;
+    color: ${props => props.theme.colors.text};
     font-weight: 500;
     font-size: 14px;
   }

@@ -1,16 +1,16 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { AuthContextProvider } from './contexts/AuthContext';
+import { CustomThemeProvider } from './contexts/ThemeContext';
+import { AdminRoom } from './pages/AdminRoom';
 import { Home } from './pages/Home';
-
 import { NewRoom } from './pages/NewRoom';
 import { Room } from './pages/Room';
-import { AdminRoom } from './pages/AdminRoom';
-import { AuthContextProvider } from './contexts/AuthContext';
 import { GlobalStyles } from './styles/global';
 
 function App(): JSX.Element {
   return (
-    <>
+    <CustomThemeProvider>
       <GlobalStyles />
       <BrowserRouter>
         <AuthContextProvider>
@@ -22,7 +22,7 @@ function App(): JSX.Element {
           </Switch>
         </AuthContextProvider>
       </BrowserRouter>
-    </>
+    </CustomThemeProvider>
   );
 }
 
