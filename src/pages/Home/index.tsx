@@ -6,6 +6,7 @@ import { Button } from '../../components/Button';
 import { Logo } from '../../components/Logo';
 import { useAuth } from '../../hooks/useAuth';
 import { database } from '../../services/firebase';
+import { toast } from 'react-toastify';
 import {
   Aside,
   Container,
@@ -39,12 +40,12 @@ export const Home: React.FC = () => {
     const roomRef = await database.ref(`rooms/${roomCode}`).get();
 
     if (!roomRef.exists()) {
-      alert('Room does not exists.');
+      toast.error('Room does not exists.');
       return;
     }
 
     if (roomRef.val().closedAt) {
-      alert('Room already closed');
+      toast.warn('Room already closed');
       return;
     }
 

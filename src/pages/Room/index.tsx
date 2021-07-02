@@ -104,7 +104,6 @@ export const Room: React.FC = () => {
               </span>
             )}
             <Button type="submit" disabled={!user}>
-              {' '}
               Enviar pergunta
             </Button>
           </FormFooter>

@@ -8,7 +8,8 @@ import { NewRoom } from './pages/NewRoom';
 import { Room } from './pages/Room';
 import { GlobalStyles } from './styles/global';
 import { ChangeTheme } from './components/ChangeTheme';
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css';
 function App(): JSX.Element {
   return (
     <CustomThemeProvider>
@@ -24,6 +25,17 @@ function App(): JSX.Element {
           </Switch>
         </AuthContextProvider>
       </BrowserRouter>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </CustomThemeProvider>
   );
 }

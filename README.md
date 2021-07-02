@@ -15,7 +15,7 @@
 </div>
 
 
-## :open_book: Sobre
+## 📖 Sobre
 Projeto desenvolvido durante a NLW Together, na trilha ReactJs da RocketSeat.
 
 
@@ -35,6 +35,32 @@ Projeto desenvolvido durante a NLW Together, na trilha ReactJs da RocketSeat.
 ## 🔖 Layout
 
 Você pode visualizar o layout do projeto através [desse link](https://www.figma.com/file/2LyCbzyCNW3mFbbR1yzzqh/Letmeask/duplicate). É necessário ter conta no [Figma](http://figma.com/) para acessá-lo.
+
+### Fotos
+<div align="center">
+
+  <p align="center">
+    <img alt="Home" title="#Cover" src=".github/images/home-light.png" width="250px" height="127px">
+    <img alt="HomeDark" title="#CoverDark" src=".github/images/home-dark.png" width="250px" height="127px" style="margin-top: 6px;">
+  </p>
+
+  <p align="center" >
+    <img alt="Room" title="#Room" src=".github/images/room-light.png" width="250px" height="127px">
+    <img alt="RoomDark" title="#RoomDark" src=".github/images/room-dark.png" width="250px" height="127px">
+  </p>
+
+  <p align="center" >
+    <img alt="AdminRoom" title="#AdminRoom" src=".github/images/admin-room-light.png" width="250px" height="127px">
+    <img alt="AdminRoomDark" title="#AdminRoomDark" src=".github/images/admin-room-dark.png" width="250px" height="127px">
+  </p>
+
+  <p align="center" >
+    <img alt="NewRoom" title="#NewRoom" src=".github/images/new-room-light.png" width="250px" height="127px">
+    <img alt="NewRoomDark" title="#NewRoomDark" src=".github/images/new-room-dark.png" width="250px" height="127px">
+  </p>
+
+</div>
+
 
 ## :information_source: Como usar
 

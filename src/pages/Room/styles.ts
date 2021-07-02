@@ -67,7 +67,7 @@ export const FormFooter = styled.footer`
 
   span {
     font-size: 14px;
-    color: #737380;
+    color: ${props => (props.theme.name === 'light' ? '#737380' : '#FEFEFE')};
     font-weight: 500;
 
     button {
