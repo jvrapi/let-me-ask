@@ -1,8 +1,8 @@
 import React, { FormEvent, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import illustrationImg from '../../assets/images/illustration.svg';
-import logoImg from '../../assets/images/logo.svg';
 import { Button } from '../../components/Button';
+import { Logo } from '../../components/Logo';
 import { useAuth } from '../../hooks/useAuth';
 import { database } from '../../services/firebase';
 import { Container, Aside, Main, MainContent } from './styles';
@@ -43,7 +43,7 @@ export const NewRoom: React.FC = () => {
       </Aside>
       <Main>
         <MainContent>
-          <img src={logoImg} alt="letmeask" />
+          <Logo />
 
           <h2>Criar uma nova sala</h2>
 

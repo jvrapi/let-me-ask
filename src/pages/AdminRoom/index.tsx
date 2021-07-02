@@ -1,6 +1,5 @@
 import React from 'react';
 import { useHistory, useParams } from 'react-router-dom';
-import logoImg from '../../assets/images/logo.svg';
 import { Button } from '../../components/Button';
 import { Question } from '../../components/Question';
 import { RoomCode } from '../../components/RoomCode';
@@ -18,6 +17,7 @@ import {
   RoomTitle,
   QuestionList
 } from './styles';
+import { Logo } from '../../components/Logo';
 
 type RoomParams = {
   id: string;
@@ -61,7 +61,7 @@ export const AdminRoom: React.FC = () => {
     <Container>
       <Header>
         <Content>
-          <img src={logoImg} alt="Letmeask" />
+          <Logo />
           <div>
             <RoomCode code={roomId} />
             <Button isOutlined onClick={handleEndRoom}>

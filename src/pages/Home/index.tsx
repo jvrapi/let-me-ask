@@ -2,8 +2,8 @@ import React, { FormEvent, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import googleIconImg from '../../assets/images/google-icon.svg';
 import illustrationImg from '../../assets/images/illustration.svg';
-import logoImg from '../../assets/images/logo.svg';
 import { Button } from '../../components/Button';
+import { Logo } from '../../components/Logo';
 import { useAuth } from '../../hooks/useAuth';
 import { database } from '../../services/firebase';
 import {
@@ -14,18 +14,9 @@ import {
   MainContent,
   Separator
 } from './styles';
-import styled from 'styled-components';
-import ReactSwitch from 'react-switch';
-import { useTheme } from '../../hooks/useTheme';
-const Switcher = styled(ReactSwitch)`
-  position: absolute !important;
-  right: 50px;
-  top: 33px;
-`;
 
 export const Home: React.FC = () => {
   const history = useHistory();
-  const { theme, changeTheme } = useTheme();
 
   const { user, signInWithGoogle } = useAuth();
   const [roomCode, setRoomCode] = useState('');
@@ -62,12 +53,6 @@ export const Home: React.FC = () => {
 
   return (
     <>
-      <Switcher
-        onChange={changeTheme}
-        checked={theme.name === 'dark'}
-        checkedIcon={false}
-        uncheckedIcon={false}
-      />
       <Container>
         <Aside>
           <img
@@ -79,7 +64,7 @@ export const Home: React.FC = () => {
         </Aside>
         <Main>
           <MainContent>
-            <img src={logoImg} alt="letmeask" />
+            <Logo />
 
             <CreateRoom onClick={handleCreateRoom}>
               <img src={googleIconImg} alt="Logo da google" />

@@ -7,6 +7,7 @@ import { Home } from './pages/Home';
 import { NewRoom } from './pages/NewRoom';
 import { Room } from './pages/Room';
 import { GlobalStyles } from './styles/global';
+import { ChangeTheme } from './components/ChangeTheme';
 
 function App(): JSX.Element {
   return (
@@ -14,6 +15,7 @@ function App(): JSX.Element {
       <GlobalStyles />
       <BrowserRouter>
         <AuthContextProvider>
+          <ChangeTheme />
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/rooms/new" component={NewRoom} />

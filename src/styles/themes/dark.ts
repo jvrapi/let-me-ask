@@ -8,7 +8,7 @@ export default {
     background: '#29292e',
     text: '#f8f8f8',
     disabled: '#CACECB',
-    ballSwitch: '#17bebb',
+    ballSwitch: '#835afd',
     headerBorder: '#835afd'
   }
 };

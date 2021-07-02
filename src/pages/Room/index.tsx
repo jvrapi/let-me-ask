@@ -1,7 +1,7 @@
 import React, { FormEvent, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import logoImg from '../../assets/images/logo.svg';
 import { Button } from '../../components/Button';
+import { Logo } from '../../components/Logo';
 import { Question } from '../../components/Question';
 import { RoomCode } from '../../components/RoomCode';
 import { useAuth } from '../../hooks/useAuth';
@@ -74,7 +74,7 @@ export const Room: React.FC = () => {
     <Container>
       <Header>
         <Content>
-          <img src={logoImg} alt="Letmeask" />
+          <Logo />
           <RoomCode code={roomId} />
         </Content>
       </Header>

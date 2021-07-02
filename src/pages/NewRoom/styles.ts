@@ -79,7 +79,7 @@ export const MainContent = styled.div`
 
   p {
     font-size: 14px;
-    color: #737380;
+    color: ${props => (props.theme.name === 'light' ? '#737380' : '#FEFEFE')};
     margin-top: 16px;
     a {
       color: #e559f9;
